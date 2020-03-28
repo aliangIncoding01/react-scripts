@@ -1,10 +1,14 @@
-import React from 'react';
+import {useEffect} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 import './test';
 
 function App() {
+  useEffect(() => {
+    post('/user/list');
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -26,6 +30,25 @@ function App() {
       </header>
     </div>
   );
+}
+
+function post(url) {
+  const xhr = new XMLHttpRequest();
+  const data = new FormData();
+  data.append('id', 12345);
+
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+        const responseText = xhr.responseText || '{}';
+        const res = JSON.parse(responseText);
+        if (res && res.code === 0) {
+          console.log(res.data);
+        }
+    }
+  };
+
+  xhr.open('POST', url);
+  xhr.send(data);
 }
 
 export default App;
