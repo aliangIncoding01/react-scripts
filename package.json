@@ -1,17 +1,17 @@
 {
-  "name": "@cachelayer/react-scripts",
-  "version": "3.4.1-alpha",
+  "name": "@aliangincoding/react-scripts",
+  "version": "3.4.1",
   "description": "Configuration and scripts for Create React App.",
   "repository": {
     "type": "git",
-    "url": "http://github.com/cachelayer/react-scripts.git"
+    "url": "http://github.com/aliangIncoding01/react-scripts"
   },
   "license": "MIT",
   "engines": {
     "node": ">=8.10"
   },
   "bugs": {
-    "url": "http://github.com/cachelayer/react-scripts/issues"
+    "url": "http://github.com/aliangIncoding01/react-scripts/issues"
   },
   "files": [
     "bin",
